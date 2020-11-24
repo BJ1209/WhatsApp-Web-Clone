@@ -1,0 +1,139 @@
+.login {
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.login__form {
+  flex-direction: column;
+  max-width: 326px;
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  display: none;
+}
+.login__number {
+  margin-bottom: 1em;
+}
+.login__form > h1 {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0.5em 0 0.7em;
+}
+.login__code {
+  width: 25% !important;
+  margin-right: 1.5em !important;
+}
+.login__inputCode > .MuiInputBase-input {
+  text-align: right !important;
+}
+.login__buttons {
+  align-self: flex-end;
+  margin: 1.5em 0;
+}
+.login__buttons > button[type="submit"] {
+  font-weight: 500 !important;
+  background-color: #3f51b5 !important;
+  color: white;
+  padding: 0.4em 0.8em !important;
+}
+.login__buttons > button:first-of-type {
+  font-weight: 600;
+  color: #3f51b5;
+  margin-right: 0.5em;
+  padding: 0.4em 0.8em;
+}
+.login__form > p {
+  color: #757575;
+  font-size: 12px;
+  text-align: left;
+}
+.login__container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 2em 4em;
+}
+.login__container > img {
+  object-fit: contain;
+  height: 8em;
+}
+.login__container > h1 {
+  color: #757575;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0.8em 0;
+}
+
+.login__container > button {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 2px;
+  color: #000;
+  margin: 0 0 1em 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  line-height: 36px;
+  width: 17em;
+  padding: 0.3em 1em;
+  transition: all 0.25s linear;
+  transform: scale(1);
+}
+.login__container > button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4285f4;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s linear;
+}
+.login__container > button:last-of-type::after {
+  background-color: #fff;
+}
+.login__container > button:hover::after,
+.login__container > button:focus::after {
+  transform: scaleX(1);
+}
+
+.login__google,
+.login__phoneBtn > svg {
+  object-fit: contain;
+  height: 1.5em;
+  margin-right: 1em;
+}
+.login__googleBtn {
+  background-color: #fff;
+}
+.login__googleBtn > span {
+  font-weight: 600;
+  color: #757575;
+}
+.login__phoneBtn {
+  background-color: #02bd7e;
+}
+.login__phoneBtn > span {
+  font-weight: 600;
+  color: white;
+}
+
+.login__phoneBtn > svg {
+  margin-right: 0.5em;
+  color: white;
+}

@@ -1,0 +1,28 @@
+.message {
+  position: relative;
+  background-color: #fff;
+  max-width: 450px;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 0.4em 0.4em 0.1em 0.6em;
+  margin: 0.5em 0;
+}
+.message:first-of-type {
+  margin-top: 0;
+}
+.message__name {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.receiver {
+  padding: 0.4em 0.4em 0.1em 0.4em;
+  margin-left: auto;
+  background-color: #dcf8c6;
+}
+
+.message__timestamp {
+  font-size: 0.6rem;
+  color: gray;
+  text-align: right;
+  margin-top: 0.4em;
+}

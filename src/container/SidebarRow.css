@@ -1,0 +1,35 @@
+.sidebarRow,
+.sidebarRow__Add {
+  padding: 0.7em 0.5em;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+}
+.sidebarRow__Add {
+  padding-left: 1.8em;
+}
+.sidebarRow__Add > h2 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.sidebarRow:hover,
+.sidebarRow__Add:hover {
+  background-color: #f5f5f5;
+}
+.sidebarRow__image {
+  display: flex;
+  justify-content: center;
+}
+.sidebarRow__name {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.sidebarRow__message,
+.sidebarRow__time {
+  font-size: 0.8rem;
+  color: #ababab;
+}
+.sidebarRow__time {
+  color: lightgray;
+}

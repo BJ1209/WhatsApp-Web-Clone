@@ -1,0 +1,47 @@
+.app {
+  height: 100vh;
+  width: 100vw;
+  background-color: #dadbd4;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.app__top {
+  width: 100%;
+  height: 17.5vh;
+  background-color: #009688;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.app__container,
+.login {
+  height: 95vh;
+  width: 91vw;
+  background-color: #f8f9fa;
+  z-index: 10;
+  display: flex;
+  transition: all 0.25s linear;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 0px) and (max-width: 1440px) {
+  .app__container,
+  .login {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
