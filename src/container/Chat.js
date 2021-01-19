@@ -47,13 +47,15 @@ function Chat() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    db.collection('rooms').doc(roomId).collection('messages').add({
-      name: user?.displayName,
-      email: user?.email,
-      message: input,
-      photoURL: user?.photoURL,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    if (input.trim()) {
+      db.collection('rooms').doc(roomId).collection('messages').add({
+        name: user?.displayName,
+        email: user?.email,
+        message: input,
+        photoURL: user?.photoURL,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+    }
     setInput('');
   };
 
