@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Avatar, Grid, IconButton, Menu, MenuItem } from "@material-ui/core";
-import { ChatRounded, DonutLargeRounded, MoreVert, Search } from "@material-ui/icons";
-import SidebarRow from "./SidebarRow";
-import db, { auth } from "../config/firebase";
-import { useStateValue } from "../Context/StateProvider";
-import "./Sidebar.css";
+import React, { useEffect, useState } from 'react';
+import { Avatar, Grid, IconButton, Menu, MenuItem } from '@material-ui/core';
+import { ChatRounded, DonutLargeRounded, MoreVert, Search } from '@material-ui/icons';
+import SidebarRow from './SidebarRow';
+import db, { auth } from '../config/firebase';
+import { useStateValue } from '../Context/StateProvider';
+import './Sidebar.css';
 
 const ITEM_HEIGHT = 54;
 
@@ -15,7 +15,7 @@ function Sidebar() {
   const open = Boolean(anchorEl);
 
   useEffect(() => {
-    const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
+    const unsubscribe = db.collection('rooms').onSnapshot((snapshot) =>
       setRooms(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -30,9 +30,9 @@ function Sidebar() {
 
   const createChat = () => {
     setAnchorEl(null);
-    const roomName = prompt("Enter Room Name: ");
+    const roomName = prompt('Enter Room Name: ');
     if (roomName?.trim()) {
-      db.collection("rooms").add({
+      db.collection('rooms').add({
         name: roomName,
       });
     }
@@ -47,8 +47,8 @@ function Sidebar() {
       <Grid className="sidebar__header" container direction="row">
         <Grid className="sidebar__avatar" item sm={2}>
           <Avatar
-            src={`${user?.photoURL ? user?.photoURL : ""}`}
-            alt={`${user?.displayName ? user?.displayName : "User"}`}
+            src={`${user?.photoURL ? user?.photoURL : ''}`}
+            alt={`${user?.displayName ? user?.displayName : 'User'}`}
           />
         </Grid>
         <Grid item sm={2} />
@@ -78,15 +78,12 @@ function Sidebar() {
               PaperProps={{
                 style: {
                   maxHeight: ITEM_HEIGHT * 4.5,
-                  width: "20ch",
+                  width: '20ch',
                 },
               }}
             >
               <MenuItem onClick={createChat}>Create A Room</MenuItem>
               <MenuItem onClick={() => setAnchorEl(null)}>Profile</MenuItem>
-              <MenuItem onClick={() => setAnchorEl(null)}>Archived</MenuItem>
-              <MenuItem onClick={() => setAnchorEl(null)}>Starred</MenuItem>
-              <MenuItem onClick={() => setAnchorEl(null)}>Settings</MenuItem>
               <MenuItem onClick={signout}>Log out</MenuItem>
             </Menu>
           </Grid>

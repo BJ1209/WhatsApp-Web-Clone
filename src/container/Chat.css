@@ -33,7 +33,7 @@
 }
 .chat__body {
   flex: 1;
-  background-image: url("../images/whatsapp__default.png");
+  background-image: url('../images/whatsapp__default.png');
   background-repeat: repeat;
   padding: 1.5em 4em;
   overflow-y: scroll;
@@ -71,4 +71,11 @@
 }
 .chat__footerAttach {
   transform: rotateZ(45deg);
+}
+.chat__emojiPicker > .emoji-picker-react {
+  width: 100% !important;
+  height: 0px !important;
+}
+.chat__emojiPicker.show > .emoji-picker-react {
+  height: 250px !important;
 }

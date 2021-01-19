@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
-import "./App.css";
-import Chat from "./container/Chat";
-import Sidebar from "./container/Sidebar";
-import { Route, Switch } from "react-router-dom";
-import Login from "./container/Login";
-import { useStateValue } from "./Context/StateProvider";
-import { auth } from "./config/firebase";
+import React, { useEffect } from 'react';
+import './App.css';
+import Chat from './container/Chat';
+import Sidebar from './container/Sidebar';
+import { Route, Switch } from 'react-router-dom';
+import Login from './container/Login';
+import { useStateValue } from './Context/StateProvider';
+import { auth } from './config/firebase';
 function App() {
   const [{ user }, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: authUser,
         });
       } else {
         dispatch({
-          type: "SET_USER",
+          type: 'SET_USER',
           user: null,
         });
       }
